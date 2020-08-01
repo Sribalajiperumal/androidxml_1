@@ -1,0 +1,38 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/colorTextInputBox</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="corner_radius">5.0</item>
+        <item name="android:textColorHint">#5867C6</item>
+        <item name="android:height">@dimen/spacing_xxxxlarge</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="AppTheme.NavigationView" parent="AppTheme">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:itemPadding">80dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="itemTextAppearance">?textAppearanceHeadline6</item>
+        <item name="android:listPreferredItemHeight">60dp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main_display.EcgMainDisplay">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pattern_artboard"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ecg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="45dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/plot"
+            app:layout_constraintBottom_toTopOf="@+id/appCompatButton3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatButton2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appCompatButton2"
+            style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="45dp"
+            android:background="@drawable/btn_cornered_accent"
+            android:drawableLeft="@drawable/ic_user_plus"
+            android:drawablePadding="@dimen/spacing_middle"
+            android:padding="@dimen/spacing_middle"
+            android:text="Select Patient from List"
+            app:layout_constraintEnd_toStartOf="@+id/appCompatButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appCompatButton"
+            style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/btn_cornered_accent"
+            android:drawableStart="@drawable/ic_patient_history"
+            android:drawablePadding="@dimen/spacing_middle"
+            android:padding="@dimen/spacing_middle"
+            android:text="Show Patient History"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginBottom="35dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_btn_bg_round"
+                android:padding="10dp"
+                android:src="@drawable/ic_energy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/spacing_middle"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Connected Device"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appCompatButton3"
+            style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="45dp"
+            android:background="@drawable/btn_cornered_accent"
+            android:drawableLeft="@drawable/ic_baseline_play_arrow_24"
+            android:drawablePadding="@dimen/spacing_middle"
+            android:drawableTint="@color/colorWhite"
+            android:padding="@dimen/spacing_middle"
+            android:text="START ECG"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+            app:layout_constraintEnd_toEndOf="@+id/imageView7" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
