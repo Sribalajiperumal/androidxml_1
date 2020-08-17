@@ -16,7 +16,7 @@
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         style="@style/AppTheme.NavigationView"
-        android:layout_width="@dimen/nav_width"
+        android:layout_width="420dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:layout_marginLeft="0dp"
@@ -28,15 +28,22 @@
         android:paddingRight="0dp"
         android:textAllCaps="true"
         app:headerLayout="@layout/nav_header_main"
-        app:itemHorizontalPadding="20dp"
-        app:itemIconPadding="20dp"
-        app:itemIconSize="24dp"
+        app:itemHorizontalPadding="45dp"
+        app:itemIconPadding="@dimen/spacing_xlarge"
+        app:itemIconSize="@dimen/spacing_xlarge"
         app:itemIconTint="@color/colorAccent"
         app:itemMaxLines="1"
         app:itemTextColor="@color/colorBlack"
         app:menu="@menu/activity_main_drawer">
 
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="45dp"
+            android:layout_marginBottom="40dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/logo_web" />
 
     </com.google.android.material.navigation.NavigationView>
-
 </androidx.drawerlayout.widget.DrawerLayout>

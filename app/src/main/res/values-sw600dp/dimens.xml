@@ -32,10 +32,9 @@
     <dimen name="no_item_img_size">80dp</dimen>
     <dimen name="appbar_padding">16dp</dimen>
 
-    <!-- bisect by 2 -->
-    <dimen name="login_logo_width">165dp</dimen>
-    <dimen name="login_logo_height">61dp</dimen>
-    <dimen name="nav_width">210dp</dimen>
-
+    <!-- max size -->
+    <dimen name="login_logo_width">330dp</dimen>
+    <dimen name="login_logo_height">113dp</dimen>
+    <dimen name="nav_width">420dp</dimen>
 
 </resources>
