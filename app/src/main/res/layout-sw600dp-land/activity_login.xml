@@ -113,11 +113,15 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/forgotPass_tv"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="50dp"
                             android:layout_weight="1"
                             android:gravity="end"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?selectableItemBackground"
                             android:linksClickable="true"
                             android:text="FORGOT PASSWORD"
                             android:textAllCaps="true"

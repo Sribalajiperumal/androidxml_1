@@ -7,20 +7,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class ForgotPasswordActivity extends AppCompatActivity {
-    AppCompatButton submit;
+public class ResetPasswordActivity extends AppCompatActivity {
+    AppCompatButton reset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_forgot_password);
+        setContentView(R.layout.activity_reset_password);
 
-        submit = findViewById(R.id.submit);
+        reset = findViewById(R.id.reset);
 
-        submit.setOnClickListener(new View.OnClickListener() {
+        reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ForgotPasswordActivity.this, ResetPasswordActivity.class);
+                Intent intent = new Intent(ResetPasswordActivity.this, PasswordResetSuccess.class);
                 startActivity(intent);
             }
         });

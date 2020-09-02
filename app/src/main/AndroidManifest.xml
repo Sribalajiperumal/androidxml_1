@@ -18,6 +18,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".EditProfileActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".PasswordResetSuccess"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
             android:name=".DashboardActivity"
             android:label="@string/title_activity_dashboard"
             android:screenOrientation="sensorLandscape" />
