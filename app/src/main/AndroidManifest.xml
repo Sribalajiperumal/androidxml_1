@@ -18,6 +18,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".patient.AddPatientActivity"
+            android:screenOrientation="sensorLandscape"  />
+        <activity
+            android:name=".patient.PatientProfileUpdateActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".patient.PatientProfileActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
+            android:name=".patient.SelectPatientActivity"
+            android:screenOrientation="sensorLandscape" />
+        <activity
             android:name=".EditProfileActivity"
             android:screenOrientation="sensorLandscape" />
         <activity

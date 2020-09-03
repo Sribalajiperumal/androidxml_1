@@ -8,6 +8,7 @@
 
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorGrey">#E5E5E5</color>
+    <color name="grey_60">#666666</color>
     <color name="colorBlack">#000000</color>
     <color name="colorText">#1E2432</color>
     <color name="colorTextInputBox">#E1E4E8</color>
