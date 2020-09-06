@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ic_rectangle_7"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="40dp"
+    android:paddingTop="20dp"
+    android:id="@+id/Rowlayout"
+    android:paddingEnd="40dp"
+    android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NAME :"
+                android:textAppearance="?textAppearanceHeadline6"
+                android:textColor="@color/grey_60"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="Patient Name "
+                android:textAppearance="?textAppearanceHeadline6"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_middle"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UHID :"
+                android:textAppearance="?textAppearanceHeadline6"
+                android:textColor="@color/grey_60"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/uhid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="0000123456789"
+                android:textAppearance="?textAppearanceHeadline6"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ImageButton
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/ic_user_list_close_26" />
+
+    <ImageButton
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/ic_user_success_26" />
+
+    <ImageButton
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/ic_user_group_26" />
+
+    <TextView
+        android:id="@+id/view_receipt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground"
+        android:padding="10dp"
+        android:text="View Records"
+        android:textAppearance="?textAppearanceHeadline6"
+        android:textColor="@color/green_600"
+        android:textSize="12sp" />
+
+</LinearLayout>

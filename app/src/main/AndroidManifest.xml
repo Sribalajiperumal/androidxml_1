@@ -17,40 +17,52 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".patient.AddPatientActivity"
-            android:screenOrientation="sensorLandscape"  />
+            android:screenOrientation="sensorLandscape" />
+        
         <activity
             android:name=".patient.PatientProfileUpdateActivity"
             android:screenOrientation="sensorLandscape" />
+
         <activity
             android:name=".patient.PatientProfileActivity"
             android:screenOrientation="sensorLandscape" />
+
         <activity
             android:name=".patient.SelectPatientActivity"
             android:screenOrientation="sensorLandscape" />
+
         <activity
             android:name=".EditProfileActivity"
             android:screenOrientation="sensorLandscape" />
+
         <activity
             android:name=".PasswordResetSuccess"
             android:screenOrientation="sensorLandscape" />
+
         <activity
             android:name=".ResetPasswordActivity"
             android:screenOrientation="sensorLandscape" />
+
         <activity
             android:name=".DashboardActivity"
             android:label="@string/title_activity_dashboard"
             android:screenOrientation="sensorLandscape" />
+
         <activity
             android:name=".ForgotPasswordActivity"
             android:screenOrientation="sensorLandscape" />
+
         <activity
             android:name=".LoginActivity"
             android:screenOrientation="sensorLandscape" />
+
         <activity
             android:name=".MainActivity"
             android:screenOrientation="sensorLandscape" />
+
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="sensorLandscape">
@@ -64,6 +76,7 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
     </application>
 
 </manifest>
