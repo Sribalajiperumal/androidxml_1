@@ -4,6 +4,470 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorGrey"
     tools:context=".patient.AddPatientActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pattern_artboard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/toggleButton"
+        android:layout_width="78dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="70dp"
+        android:background="@color/colorPrimary"
+        android:elevation="1dp"
+        android:src="@drawable/ic_baseline_menu_36"
+        android:tint="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="650dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ic_bg_radio_group"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <RadioButton
+                android:id="@+id/rb_newpatient"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_radio_bg"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="New Patient"
+                android:textAppearance="?textAppearanceSubtitle1"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rb_existing"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btn_radio_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Existing"
+                android:textAppearance="?textAppearanceSubtitle1"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+
+            <LinearLayout
+                android:id="@+id/new_patient_block"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="650dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_bg_rectangle"
+                    android:orientation="vertical"
+                    android:padding="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/grey_60"
+                        app:boxBackgroundColor="@null">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/uhid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="UHID"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/grey_60"
+                        app:boxBackgroundColor="@null">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/patient_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Patient ID"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/grey_60"
+                        app:boxBackgroundColor="@null">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/fullname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Full Name"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/grey_60"
+                        app:boxBackgroundColor="@null">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/age"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Age"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/spacing_middle"
+                            android:text="Gender"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/grey_60" />
+
+                        <RadioGroup
+                            android:id="@+id/gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/male"
+                                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                android:buttonTint="@color/colorPrimaryDark"
+                                android:gravity="center"
+                                android:text="Male"
+                                android:textAppearance="?textAppearanceSubtitle1" />
+
+                            <RadioButton
+                                android:id="@+id/female"
+                                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/spacing_large"
+                                android:buttonTint="@color/colorPrimaryDark"
+                                android:gravity="center"
+                                android:text="Female"
+                                android:textAppearance="?textAppearanceSubtitle1" />
+
+                            <RadioButton
+                                android:id="@+id/others"
+                                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/colorPrimaryDark"
+                                android:gravity="center"
+                                android:text="Other"
+                                android:textAppearance="?textAppearanceSubtitle1" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/grey_60"
+                        app:boxBackgroundColor="@null">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/mobileNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Mobile Number"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/grey_60"
+                        app:boxBackgroundColor="@null">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Address (Optional)"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/appCompatButton3"
+                    style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+                    android:layout_width="300dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/btn_cornered_accent"
+                    android:padding="@dimen/spacing_middle"
+                    android:text="NEXT"
+                    android:textAllCaps="true"
+                    android:textAppearance="?textAppearanceHeadline6"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/patient_list_block"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="650dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_bg_rectangle"
+                    android:orientation="vertical"
+                    android:padding="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_rectangle_39"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="?actionBarSize"
+                            android:layout_height="40dp"
+                            android:padding="@dimen/spacing_middle"
+                            android:src="@drawable/ic_filter_36"
+                            android:tint="@color/colorPrimary" />
+
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup_filter"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <RadioButton
+                                android:id="@+id/rb_uhid"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/btn_radio_bg"
+                                android:button="@null"
+                                android:checked="true"
+                                android:gravity="center"
+                                android:text="UHID"
+                                android:textAppearance="?textAppearanceSubtitle1"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/rb_patient_uhid"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/btn_radio_bg"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="Patient UHID"
+                                android:textAppearance="?textAppearanceSubtitle1"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/rb_patient_id"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/btn_radio_bg"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="Patient ID"
+                                android:textAppearance="?textAppearanceSubtitle1"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/rb_name"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/btn_radio_bg"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:text="Name"
+                                android:textAppearance="?textAppearanceSubtitle1"
+                                android:textStyle="bold" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                    <!--                        android:id="@+id/email"-->
+                    <!--                        style="@style/TextInputLayoutSearchStyle"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        app:boxStrokeWidth="0dp"-->
+                    <!--                        app:boxBackgroundColor="@null"-->
+                    <!--                        app:hintEnabled="false">-->
+
+                    <!--                        <com.google.android.material.textfield.TextInputEditText-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="60dp"-->
+                    <!--                            android:drawableEnd="@drawable/ic_search_black_36dp"-->
+                    <!--                            android:drawableTint="@color/colorPrimary"-->
+                    <!--                            android:focusable="true"-->
+                    <!--                            android:gravity="left|center_vertical"-->
+                    <!--                            android:hint="SEARCH PATIENT"-->
+                    <!--                            android:inputType="text"-->
+                    <!--                            android:maxLines="1"-->
+                    <!--                            android:selectAllOnFocus="true"-->
+                    <!--                            android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+                    <!--                            android:textColor="@color/colorPrimary"-->
+                    <!--                            android:textSize="16sp" />-->
+                    <!--                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                    <!--                    <com.google.android.material.textfield.TextInputLayout-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        app:boxBackgroundColor="@null">-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_middle"
+                        app:boxBackgroundColor="@null"
+                        app:boxStrokeWidth="2dp"
+                        app:hintEnabled="false">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/search"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:drawableEnd="@drawable/ic_search_black_36dp"
+                            android:drawableTint="@color/colorPrimary"
+                            android:focusable="true"
+                            android:gravity="left|center_vertical"
+                            android:hint="Search patient by UHID number"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:selectAllOnFocus="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rc_userlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_middle" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,6 +17,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/toggleButton"
+        android:layout_width="78dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="70dp"
+        android:background="@color/colorPrimary"
+        android:elevation="1dp"
+        android:src="@drawable/ic_baseline_menu_36"
+        android:tint="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="680dp"

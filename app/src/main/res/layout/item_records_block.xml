@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:text="6 Leads"
             android:textAppearance="?textAppearanceSubtitle1"
-            android:textStyle="bold" />
+            android:textStyle="normal" />
 
     </LinearLayout>
 

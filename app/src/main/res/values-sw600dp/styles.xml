@@ -26,6 +26,15 @@
         <item name="android:height">@dimen/spacing_xxxxlarge</item>
     </style>
 
+    <style name="TextInputLayoutPatientStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/colorTextInputBox</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="background">@drawable/ic_rectangle_6</item>
+        <item name="corner_radius">10.0</item>
+        <item name="android:textColorHint">#5867C6</item>
+        <item name="android:height">@dimen/spacing_xxxxlarge</item>
+    </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

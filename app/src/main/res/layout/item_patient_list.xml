@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ic_rectangle_7"
+    android:orientation="vertical"
+    android:paddingStart="30dp"
+    android:paddingTop="20dp"
+    android:paddingEnd="30dp"
+    android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name : "
+            android:textAppearance="?textAppearanceSubtitle1"
+            android:textColor="@color/grey_60"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="John Doe"
+            android:textAppearance="?textAppearanceSubtitle1"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UHID : "
+            android:textAppearance="?textAppearanceSubtitle1"
+            android:textColor="@color/grey_60"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/uhid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="00EDI9F920394"
+            android:textAppearance="?textAppearanceSubtitle1"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+</LinearLayout>

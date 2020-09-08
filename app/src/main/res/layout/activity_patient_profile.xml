@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/colorGrey"
     android:layout_height="match_parent"
     tools:context=".patient.PatientProfileActivity">
 
@@ -17,6 +18,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/toggleButton"
+        android:layout_width="78dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="70dp"
+        android:background="@color/colorPrimary"
+        android:elevation="1dp"
+        android:src="@drawable/ic_baseline_menu_36"
+        android:tint="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="650dp"
@@ -25,7 +38,7 @@
         android:layout_marginTop="32dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="30dp"
+        android:padding="20dp"
         app:layout_constraintDimensionRatio="w,1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +110,6 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:orientation="vertical">
-
 
             <LinearLayout
                 android:id="@+id/profile"
@@ -334,7 +346,7 @@
             <LinearLayout
                 android:id="@+id/record"
                 android:layout_width="650dp"
-                android:layout_height="match_parent"
+                android:layout_height="500dp"
                 android:background="@drawable/ic_bg_rectangle"
                 android:orientation="vertical">
 
