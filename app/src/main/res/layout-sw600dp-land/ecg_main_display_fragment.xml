@@ -7,9 +7,11 @@
     tools:context=".ui.main_display.EcgMainDisplay">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_block"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorGrey">
+        android:background="@color/colorGrey"
+        android:visibility="gone">
 
         <ImageView
             android:id="@+id/imageView7"
@@ -26,14 +28,14 @@
             android:id="@+id/ecg"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="20dp"
             android:layout_marginBottom="45dp"
             android:scaleType="fitXY"
             android:src="@drawable/plot"
             app:layout_constraintBottom_toTopOf="@+id/appCompatButton3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/appCompatButton2" />
+            app:layout_constraintTop_toBottomOf="@+id/select_patient" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/select_patient"
@@ -112,6 +114,385 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageView7"
             app:layout_constraintEnd_toEndOf="@+id/imageView7" />
 
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ecg_start_block"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey">
+
+        <LinearLayout
+            android:id="@+id/lead_block"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/red_dark"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/red_light"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_oct"
+                android:tint="@color/colorWhite" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:text="Lead Error:"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:text="Lead 3 Disconnected"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lead_signal_block"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="60dp"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginEnd="@dimen/spacing_middle"
+                android:text="Lead Error:"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_ecg_22" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/plot"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_block"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lead_signal_block" />
+
+        <LinearLayout
+            android:id="@+id/bottom_block"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:drawableLeft="@drawable/ic_heart"
+                android:drawablePadding="@dimen/spacing_middle"
+                android:text="82 BPM"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/spacing_large"
+                android:background="@drawable/btn_cornered_accent"
+                android:drawableLeft="@drawable/ic_record_34"
+                android:drawablePadding="@dimen/spacing_medium"
+                android:drawableTint="@color/colorWhite"
+                android:padding="@dimen/spacing_middle"
+                android:text="RECORD"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_block_left"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:gravity="center_vertical|start"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_lead_icon"
+                android:drawablePadding="@dimen/spacing_middle"
+                android:gravity="center_vertical"
+                android:text="KardioScreen-0032 : 6 Lead"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:drawableLeft="@drawable/ic_battery_32"
+                android:drawablePadding="@dimen/spacing_middle"
+                android:gravity="center_vertical"
+                android:text="65%"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ecg_record_block"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/pg_lead_signal_block"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="60dp"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginEnd="@dimen/spacing_middle"
+                android:text="Lead Error:"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_ecg_22" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/plot"
+            app:layout_constraintBottom_toTopOf="@+id/pg_bottom_block"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pg_lead_signal_block" />
+
+        <LinearLayout
+            android:id="@+id/pg_bottom_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:drawableLeft="@drawable/ic_heart"
+                android:drawablePadding="@dimen/spacing_middle"
+                android:text="82 BPM"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@drawable/ic_recording_34"
+                android:drawablePadding="@dimen/spacing_middle"
+                android:gravity="center_vertical"
+                android:text="RECORDING IN PROGRESS"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="36%"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/spacing_large"
+                android:background="@drawable/btn_cornered_accent"
+                android:drawableLeft="@drawable/ic_cancel_34"
+                android:drawablePadding="@dimen/spacing_medium"
+                android:drawableTint="@color/colorWhite"
+                android:padding="@dimen/spacing_middle"
+                android:text="Cancel"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ecg_completed_block"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/plot"
+            app:layout_constraintBottom_toTopOf="@+id/cmp_bottom_block"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <LinearLayout
+            android:id="@+id/cmp_bottom_block"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView10">
+
+            <TextView
+                android:id="@+id/cancel_ecg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_group_39"
+                android:drawablePadding="@dimen/spacing_middle"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:padding="@dimen/spacing_middle"
+                android:text="CANCEL"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/retake_ecg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_retake_24"
+                android:drawablePadding="@dimen/spacing_middle"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:padding="@dimen/spacing_middle"
+                android:text="RETAKE"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/save_ecg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_save_ecg_24"
+                android:drawablePadding="@dimen/spacing_middle"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:padding="@dimen/spacing_middle"
+                android:text="SAVE"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cmp_bottom_block_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:gravity="center_vertical|start"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Speed: 25mm/sec F: 0.05 - 40 Hz Limb: 10mm/mV"
+                android:textAppearance="?textAppearanceHeadline6"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

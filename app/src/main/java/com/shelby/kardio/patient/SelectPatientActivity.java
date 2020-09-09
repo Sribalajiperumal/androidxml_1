@@ -5,7 +5,10 @@ import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -27,6 +30,7 @@ public class SelectPatientActivity extends AppCompatActivity {
     private LinearLayout linearLayout2;
     private TextInputLayout email;
     private RecyclerView rcPatient;
+    private ImageButton add_patient;
 
     ArrayList<UserModels> userModels;
 
@@ -45,7 +49,15 @@ public class SelectPatientActivity extends AppCompatActivity {
         linearLayout2 = (LinearLayout) findViewById(R.id.linearLayout2);
         email = (TextInputLayout) findViewById(R.id.email);
         rcPatient = (RecyclerView) findViewById(R.id.rc_patient);
+        add_patient = (ImageButton) findViewById(R.id.add_patient);
 
+        add_patient.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SelectPatientActivity.this, AddPatientActivity.class);
+                startActivity(intent);
+            }
+        });
 
         rcPatient.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 

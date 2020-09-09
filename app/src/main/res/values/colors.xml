@@ -6,6 +6,8 @@
     <color name="colorAccent">#B43366</color>
     <color name="colorAccentDark">#AF2C60</color>
     <color name="green_600">#43A047</color>
+    <color name="red_light">#FF0D0D</color>
+    <color name="red_dark">#D60E0E</color>
 
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorGrey">#E5E5E5</color>

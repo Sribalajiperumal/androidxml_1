@@ -6,7 +6,9 @@ import androidx.appcompat.widget.AppCompatEditText;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -47,6 +49,7 @@ public class AddPatientActivity extends AppCompatActivity {
     private RadioButton rbName;
     private TextInputEditText search;
     private RecyclerView rcUserlist;
+    private AppCompatButton btn_next;
 
     SearchUserAdapter adapter;
     ArrayList<UserModels> itemlist = new ArrayList<>();
@@ -82,11 +85,39 @@ public class AddPatientActivity extends AppCompatActivity {
         rbName = (RadioButton) findViewById(R.id.rb_name);
         search = (TextInputEditText) findViewById(R.id.search);
         rcUserlist = (RecyclerView) findViewById(R.id.rc_userlist);
+        btn_next = (AppCompatButton) findViewById(R.id.btn_next);
 
         rcUserlist.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
+        newPatientBlock.setVisibility(View.VISIBLE);
+        patientListBlock.setVisibility(View.GONE);
 
         adapter = new SearchUserAdapter(itemlist, AddPatientActivity.this, getApplicationContext());
         rcUserlist.setAdapter(adapter);
         rcUserlist.setHasFixedSize(true);
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.rb_newpatient) {
+                    newPatientBlock.setVisibility(View.VISIBLE);
+                    patientListBlock.setVisibility(View.GONE);
+                } else if (checkedId == R.id.rb_existing) {
+                    newPatientBlock.setVisibility(View.GONE);
+                    patientListBlock.setVisibility(View.VISIBLE);
+                } else {
+                    newPatientBlock.setVisibility(View.VISIBLE);
+                    patientListBlock.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        btn_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AddPatientActivity.this, PatientProfileUpdateActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

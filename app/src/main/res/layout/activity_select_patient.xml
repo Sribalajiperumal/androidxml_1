@@ -173,6 +173,7 @@
                             android:layout_height="20dp" />
 
                         <ImageButton
+                            android:id="@+id/add_patient"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:background="@drawable/ic_rectangle_37"
