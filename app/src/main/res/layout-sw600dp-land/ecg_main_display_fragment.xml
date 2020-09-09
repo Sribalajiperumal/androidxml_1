@@ -191,7 +191,6 @@
                 android:src="@drawable/ic_ecg_22" />
         </LinearLayout>
 
-
         <ImageView
             android:id="@+id/imageView9"
             android:layout_width="match_parent"
@@ -275,7 +274,6 @@
                 android:textColor="@color/colorBlack"
                 android:textStyle="bold" />
         </LinearLayout>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
